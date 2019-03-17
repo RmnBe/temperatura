@@ -18,11 +18,11 @@ else {
 		output.innerHTML = output.innerHTML + ' a woda właśnie zaczyna się gotować.';}
 	else if(tempF == 32){
 		output.innerHTML = output.innerHTML + ' a woda właśnie zaczyna zamarzać';}
-	else {
+	else if(tempF>212){
 		output.innerHTML = output.innerHTML + ' a woda występuje w postaci pary wodnej.';}
 }); 
 
-/*
+
 var output2 = document.getElementById('greeter-output2');
 output2.innerHTML = 'Naciśnij przycisk żeby obliczyć temperaturę' + '<br><br>' + output2.innerHTML;
 var button2 = document.getElementById('greeter-button2');
@@ -31,17 +31,17 @@ button2.addEventListener('click', function(){
 tempF2 = window.prompt('Podaj temperaturę w stopniach Fahrenheita');
 if (isNaN(tempF2)) {output2.innerHTML = 'Podaj poprawną liczbę' + '<br><br>' + output2.innerHTML}
 else {
-	var tempC2 = (5 / 9) (tempF2 - 32)
-	output2.innerHTML = 'Temperatura '+tempF2+' w stopniach Fahrenheita to '+tempC2' w stopniach Celsjusza'}
+	var tempC2 = (5 / 9) * (tempF2 - 32)
+	output2.innerHTML = 'Temperatura '+tempF2+' w stopniach Fahrenheita to '+tempC2+' w stopniach Celsjusza'}
 	if(tempF2 < 32){
-		output.innerHTML = output.innerHTML + ' a woda jest zamarznięta.';}
-	else if(tempF2 > 32 && tempF < 212){
-		output.innerHTML = output.innerHTML + ' a woda jest w stanie ciekłym.';}
+		output2.innerHTML = output2.innerHTML + ' a woda jest zamarznięta.';}
+	else if(tempF2 > 32 && tempF2 < 212){
+		output2.innerHTML = output2.innerHTML + ' a woda jest w stanie ciekłym.';}
 	else if(tempF2 == 212){
-		output.innerHTML = output.innerHTML + ' a woda właśnie zaczyna się gotować.';}
+		output2.innerHTML = output2.innerHTML + ' a woda właśnie zaczyna się gotować.';}
 	else if(tempF2 == 32){
-		output.innerHTML = output.innerHTML + ' a woda właśnie zaczyna zamarzać';}
-	else {
-		output.innerHTML = output.innerHTML + ' a woda występuje w postaci pary wodnej.';}
+		output2.innerHTML = output2.innerHTML + ' a woda właśnie zaczyna zamarzać';}
+	else if(tempF2>212){
+		output2.innerHTML = output2.innerHTML + ' a woda występuje w postaci pary wodnej.';}
 });
-*/
+
